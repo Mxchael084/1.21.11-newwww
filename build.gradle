@@ -20,11 +20,11 @@ minecraft {
 }
 
 repositories {
+    // Wichtig bei ForgeGradle 7: ohne diese Repositories landet Minecraft nicht im Classpath
+    maven minecraft.mavenizer
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
     mavenCentral()
-    maven {
-        name = 'MinecraftForge'
-        url = 'https://maven.minecraftforge.net/'
-    }
 }
 
 dependencies {
